@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        div{
+            background-color: yellow;
+            margin: 20px;
+            text-align: center;
+        }
+        div>h1{
+            margin: 20px;
+        }
+        div>button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="display">Message</h1>
+        <button onclick="printmessage();">Click Here</button>
+    </div>
+    <script>
+        function printmessage()
+        {
+            let h1tag=document.getElementById('display');
+            h1tag.textContent="HTML";
+            h1tag.style.color="red";
+        }
+    </script>
+</body>
+</html>

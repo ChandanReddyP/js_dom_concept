@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <style>
+        div
+        {
+            background-color: black;
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+        div>span{
+            margin: 20px;
+        }
+        div>button:hover{
+            cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+    <div>
+        <button id="dec-btn">decrement</button>
+        <span id="display">count</span>
+        <button id="inc-btn">increment</button>
+    </div>
+    <script>
+        
+        let countdisplay=document.getElementById('display');
+
+        let count=0;
+        countdisplay.textContent=count;
+
+        function incCount()
+        {
+            count++;
+            countdisplay.textContent=count;
+        }
+
+        function decCount()
+        {
+            if (count>1)
+            {
+                count--;
+                countdisplay.textContent=count;
+            }
+            else countdisplay.textContent=1;
+        }
+        let clickdec=document.getElementById('dec-btn');
+        clickdec.addEventListener('click',decCount);
+        
+        let clickinc=document.getElementById('inc-btn');
+        clickinc.addEventListener('click',incCount);
+    </script>
+</body>
+</html>

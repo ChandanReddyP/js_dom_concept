@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin-top: 0px;
+        }
+        div{
+            background-color: yellow;
+            padding: 20px;
+            text-align: center;
+        }
+        div>h1{
+            margin-bottom: 20px;
+
+        }
+        div>button:hover
+        {
+            cursor: pointer;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="display">Message</h1>
+        <button onclick="printmessage1();">Click first</button>
+        
+        <button onclick="printmessage();">Click Here</button>
+        
+        <button onclick="printmessage2();">Click last</button>
+    </div>
+    <script>
+        function printmessage()
+        {
+            let h1tag=document.getElementById('display');
+            h1tag.textContent="Happy Birthday";
+            h1tag.style.color="blue";
+        }
+        function printmessage1()
+        {
+            let h1tag=document.getElementById('display');
+            h1tag.textContent="Happy Sunday";
+            h1tag.style.color="red";
+        }
+        function printmessage2()
+        {
+            let h1tag=document.getElementById('display');
+            h1tag.textContent="Happy dom concept";
+            h1tag.style.color="green";
+        }
+    </script>
+</body>
+</html>
